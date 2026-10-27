@@ -55,6 +55,8 @@ double PoleTrojkata(double a, double h);
 
 void Dzielnik(int a);
 
+double SredniaWazona(double a, double b);
+
 int main() {
 	string imie;
 	cout << "Podaj imie: ", cin >> imie;
@@ -84,6 +86,12 @@ int main() {
 	int liczba7;
 	cout << "Podaj a: ", cin >> liczba7;
 	Dzielnik(liczba7);
+
+	double a, b;
+	cout << "Podaj dwie wartosci: ";
+	cin >> a >> b;
+
+	cout << "Srednia wazona: " << SredniaWazona(a, b) << endl;
 }
 //Zadanie 1
 void Powitanie(string a) {
@@ -154,4 +162,20 @@ void Dzielnik(int a) {
 			cout << i << endl;
 		}
 	}
+}
+// Zadanie 7
+double SredniaWazona(double a, double b) {
+	double wagaA, wagaB;
+
+	cout << "Podaj wage pierwszej wartosci: ";
+	cin >> wagaA;
+	cout << "Podaj wage drugiej wartosci: ";
+	cin >> wagaB;
+
+	if (wagaA + wagaB == 0) {
+		cout << "Suma wag nie moze wynosic 0." << endl;
+		return 0;
+	}
+
+	return (a * wagaA + b * wagaB) / (wagaA + wagaB);
 }
