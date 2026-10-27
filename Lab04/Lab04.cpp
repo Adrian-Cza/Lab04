@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -57,6 +58,8 @@ void Dzielnik(int a);
 
 double SredniaWazona(double a, double b);
 
+void Przeciwprostokatna(double a, double b);
+
 int main() {
 	string imie;
 	cout << "Podaj imie: ", cin >> imie;
@@ -90,8 +93,12 @@ int main() {
 	double a, b;
 	cout << "Podaj dwie wartosci: ";
 	cin >> a >> b;
-
 	cout << "Srednia wazona: " << SredniaWazona(a, b) << endl;
+
+	double jedna, druga;
+	cout << "Podaj przyprosotkatne: ";
+	cin >> jedna >> druga;
+	Przeciwprostokatna(jedna, druga);
 }
 //Zadanie 1
 void Powitanie(string a) {
@@ -178,4 +185,9 @@ double SredniaWazona(double a, double b) {
 	}
 
 	return (a * wagaA + b * wagaB) / (wagaA + wagaB);
+}
+// Zadanie 8
+void Przeciwprostokatna(double a, double b) {
+	double przeciw = pow(a, 2) + pow(b, 2);
+	cout << "Przeciwprosotkatna: " << przeciw;
 }
