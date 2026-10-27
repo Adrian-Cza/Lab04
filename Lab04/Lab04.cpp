@@ -51,6 +51,8 @@ int Wieksza(int a, int b);
 void KtoraNajmniejsza(int a, int b, int c);
 int Najmniejsza(int a, int b, int c);
 
+double PoleTrojkata(double a, double h);
+
 int main() {
 	string imie;
 	cout << "Podaj imie: ", cin >> imie;
@@ -70,6 +72,12 @@ int main() {
 	cout << "Podaj c: ", cin >> liczba6;
 	KtoraNajmniejsza(liczba4, liczba5, liczba6);
 	cout << "Najmniejsza jest: " << Najmniejsza(liczba4, liczba5, liczba6) << endl;
+
+	double podstawa, wysokosc;
+	cout << "Podaj podstawe i wysokosc: ";
+	cin >> podstawa >> wysokosc;
+	double pole = poleTrojkata(podstawa, wysokosc);
+	cout << "Podwojone pole: " << pole * 2 << endl;
 	
 }
 //Zadanie 1
@@ -126,4 +134,11 @@ int Najmniejsza(int a, int b, int c) {
 		min = c;
 	}
 	return min;
+}
+
+// Zadanie 5
+double poleTrojkata(double podstawa, double wysokosc) {
+	double pole = podstawa * wysokosc / 2;
+	cout << "Pole trojkata: " << pole << endl;
+	return pole;
 }
