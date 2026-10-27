@@ -41,13 +41,24 @@ void wyswietlanie(int a, int b) {
 */
 
 void Powitanie(string a);
+void Tabliczka();
 
 int main() {
 	string imie;
 	cout << "Podaj imie: ", cin >> imie;
 	Powitanie(imie);
+	Tabliczka();
 }
 //Zadanie 1
 void Powitanie(string a) {
 	cout << "Czesc, " << a << endl;
+}
+//Zadanie 2
+void Tabliczka() {
+	for (int i = 1; i <= 10; i++) {
+		for (int j = 1; j <= 10; j++) {
+			cout << i * j << " ";
+		}
+		cout << endl;
+	}
 }
