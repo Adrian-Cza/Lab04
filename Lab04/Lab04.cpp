@@ -42,16 +42,25 @@ void wyswietlanie(int a, int b) {
 
 void Powitanie(string a);
 void Tabliczka();
+void KtoraWieksza(int a, int b);
+int Wieksza(int a, int b);
 
 int main() {
 	string imie;
 	cout << "Podaj imie: ", cin >> imie;
 	Powitanie(imie);
+
 	Tabliczka();
+
+	int liczba1, liczba2;
+	cout << "Podaj a: ", cin >> liczba1;
+	cout << "Podaj b: ", cin >> liczba2;
+	KtoraWieksza(liczba1, liczba2);
+	cout << "\nWieksza jest: " << Wieksza(liczba1, liczba2);
 }
 //Zadanie 1
 void Powitanie(string a) {
-	cout << "Czesc, " << a << endl;
+	cout << "Czesc, " << a << endl << endl;
 }
 //Zadanie 2
 void Tabliczka() {
@@ -61,4 +70,23 @@ void Tabliczka() {
 		}
 		cout << endl;
 	}
+	cout << endl;
+}
+// Zadanie 3
+void KtoraWieksza(int a, int b) {
+	if (a > b) {
+		cout << "Liczba a jest wieksza";
+	}
+	else if(b > a){
+		cout << "Liczba b jest wieksza";
+	}
+	else {
+		cout << "Liczby sa rowne";
+	}
+}
+
+int Wieksza(int a, int b) {
+	int wieksza;
+	a > b ? wieksza = a : wieksza = b;
+	return wieksza;
 }
