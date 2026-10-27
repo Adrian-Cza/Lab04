@@ -40,10 +40,16 @@ void wyswietlanie(int a, int b) {
 	Wartosci a oraz b: 49 i 25
 */
 
+
 void Powitanie(string a);
+
 void Tabliczka();
+
 void KtoraWieksza(int a, int b);
 int Wieksza(int a, int b);
+
+void KtoraNajmniejsza(int a, int b, int c);
+int Najmniejsza(int a, int b, int c);
 
 int main() {
 	string imie;
@@ -56,7 +62,15 @@ int main() {
 	cout << "Podaj a: ", cin >> liczba1;
 	cout << "Podaj b: ", cin >> liczba2;
 	KtoraWieksza(liczba1, liczba2);
-	cout << "\nWieksza jest: " << Wieksza(liczba1, liczba2);
+	cout << "\nWieksza jest: " << Wieksza(liczba1, liczba2) << endl;;
+
+	int liczba4, liczba5, liczba6;
+	cout << "Podaj a: ", cin >> liczba4;
+	cout << "Podaj b: ", cin >> liczba5;
+	cout << "Podaj c: ", cin >> liczba6;
+	KtoraNajmniejsza(liczba4, liczba5, liczba6);
+	cout << "Najmniejsza jest: " << Najmniejsza(liczba4, liczba5, liczba6) << endl;
+	
 }
 //Zadanie 1
 void Powitanie(string a) {
@@ -75,13 +89,13 @@ void Tabliczka() {
 // Zadanie 3
 void KtoraWieksza(int a, int b) {
 	if (a > b) {
-		cout << "Liczba a jest wieksza";
+		cout << "Liczba a jest wieksza" << endl;
 	}
 	else if(b > a){
-		cout << "Liczba b jest wieksza";
+		cout << "Liczba b jest wieksza" << endl;
 	}
 	else {
-		cout << "Liczby sa rowne";
+		cout << "Liczby sa rowne" << endl;
 	}
 }
 
@@ -89,4 +103,27 @@ int Wieksza(int a, int b) {
 	int wieksza;
 	a > b ? wieksza = a : wieksza = b;
 	return wieksza;
+}
+// Zadanie 4
+void KtoraNajmniejsza(int a, int b, int c) {
+	if (a < b && a < c) {
+		cout << "Liczba a jest najmniejsza" << endl;
+	}
+	if (b < a && b < c) {
+		cout << "Liczba b jest najmniejsza" << endl;
+	}
+	if (c < a && c < b) {
+		cout << "Liczba c jest najmniejsza" << endl;
+	}
+}
+
+int Najmniejsza(int a, int b, int c) {
+	int min = a;
+	if (b < min) {
+		min = b;
+	}
+	if (c < min) {
+		min = c;
+	}
+	return min;
 }
