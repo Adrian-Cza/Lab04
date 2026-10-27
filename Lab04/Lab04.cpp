@@ -39,3 +39,15 @@ void wyswietlanie(int a, int b) {
 	Zmienna globalna: 20
 	Wartosci a oraz b: 49 i 25
 */
+
+void Powitanie(string a);
+
+int main() {
+	string imie;
+	cout << "Podaj imie: ", cin >> imie;
+	Powitanie(imie);
+}
+//Zadanie 1
+void Powitanie(string a) {
+	cout << "Czesc, " << a << endl;
+}
