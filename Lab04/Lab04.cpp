@@ -53,6 +53,8 @@ int Najmniejsza(int a, int b, int c);
 
 double PoleTrojkata(double a, double h);
 
+void Dzielnik(int a);
+
 int main() {
 	string imie;
 	cout << "Podaj imie: ", cin >> imie;
@@ -76,9 +78,12 @@ int main() {
 	double podstawa, wysokosc;
 	cout << "Podaj podstawe i wysokosc: ";
 	cin >> podstawa >> wysokosc;
-	double pole = poleTrojkata(podstawa, wysokosc);
+	double pole = PoleTrojkata(podstawa, wysokosc);
 	cout << "Podwojone pole: " << pole * 2 << endl;
 	
+	int liczba7;
+	cout << "Podaj a: ", cin >> liczba7;
+	Dzielnik(liczba7);
 }
 //Zadanie 1
 void Powitanie(string a) {
@@ -135,10 +140,18 @@ int Najmniejsza(int a, int b, int c) {
 	}
 	return min;
 }
-
 // Zadanie 5
-double poleTrojkata(double podstawa, double wysokosc) {
+double PoleTrojkata(double podstawa, double wysokosc) {
 	double pole = podstawa * wysokosc / 2;
 	cout << "Pole trojkata: " << pole << endl;
 	return pole;
+}
+// Zadanie 6
+void Dzielnik(int a) {
+	cout << "Dzielniki liczby " << a << ":" << endl;
+	for (int i = 1; i <= a; i++) {
+		if (a % i == 0) {
+			cout << i << endl;
+		}
+	}
 }
